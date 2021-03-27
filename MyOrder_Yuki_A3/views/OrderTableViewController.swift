@@ -4,7 +4,7 @@
 //
 //  Created by Yuki Waka on 2021-02-18.
 //  Student# : 141082180
-//  Date : Feb 19.2021
+//  Date : Mar 27.2021
 //
 
 import UIKit
@@ -96,19 +96,24 @@ class OrderTableViewController: UITableViewController {
     }
     
     private func deleteOrderFromList(indexPath: IndexPath){
-        //remove order from the list
-        self.orderList.remove(at: indexPath.row)
+//        //remove order from the list
+//        self.orderList.remove(at: indexPath.row)
+//
+//        //delete the table row
+//        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+//        self.tableView.reloadData()
         
-        //delete the table row
-        self.tableView.deleteRows(at: [indexPath], with: .automatic)
-        self.tableView.reloadData()
+        self.dbHelper.deleteOrder(orderID: self.orderList[indexPath.row].id!)
+        self.fetchAllOrders()
     }
     
     private func updateOrderInList(indexPath: IndexPath, quantity: String){
         self.orderList[indexPath.row].quantity = quantity
        
+       // self.tableView.reloadRows(at: [indexPath], with: .automatic)
         
-        self.tableView.reloadRows(at: [indexPath], with: .automatic)
+        self.dbHelper.updateOrder(updatedOrder: self.orderList[indexPath.row])
+        self.fetchAllOrders()
     }
     
     private func setUpLongPressGesture(){

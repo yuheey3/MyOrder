@@ -3,7 +3,7 @@
 //  YukiWaka_MyOrder
 //  Created by Yuki Waka on 2021-02-18.
 //  Student# : 141082180
-//  Date : Feb 19.2021
+//  Date : Mar 27.2021
 
 import UIKit
 
@@ -52,16 +52,16 @@ class ViewController: UIViewController {
     @IBAction func addOrder(){
         
         if(!self.quantity.text!.isEmpty){
-            let newOrder = MyOrder()
+            var newOrder = Order()
             newOrder.type = self.typeList[self.pkrType.selectedRow(inComponent: 0)]
             newOrder.size = self.segSize.titleForSegment(at: self.segSize.selectedSegmentIndex)!
             newOrder.quantity = quantity.text!
             
-            //self.dbHelper.insertOrder(newMyOrder: newOrder)
+            self.dbHelper.insertOrder(newMyOrder: newOrder)
            
             //orderList.append(newOrder)
-           
-            print(#function, "Type : \(newOrder.type) Size : \(newOrder.size) Qty :  \(newOrder.quantity)")
+//
+//            print(#function, "Type : \(newOrder.type) Size : \(newOrder.size) Qty :  \(newOrder.quantity)")
             
             let confirmAlert = UIAlertController(title: "Confirmation", message: "Your order is added!", preferredStyle: .actionSheet)
             

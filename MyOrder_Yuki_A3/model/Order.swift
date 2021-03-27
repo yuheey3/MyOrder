@@ -22,6 +22,7 @@ struct Order{
         self.quantity = ""
  //       self.date = Date()
     }
+   
     
     init(type : String, size : String, quantity : String){
         self.type = type

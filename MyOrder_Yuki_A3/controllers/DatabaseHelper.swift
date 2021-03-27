@@ -39,8 +39,8 @@ class DatabaseHelper{
     //delete
     
     
-    //retrieve all todos
-    func getAllTodos() -> [MyOrder]?{
+    //retrieve all orders
+    func getAllOrders() -> [MyOrder]?{
         let fetchRequest = NSFetchRequest<MyOrder>(entityName: ENTITY_NAME)
         fetchRequest.sortDescriptors = [NSSortDescriptor.init(key: "date", ascending: true )]
         

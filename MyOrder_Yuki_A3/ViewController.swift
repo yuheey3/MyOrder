@@ -12,10 +12,15 @@ class ViewController: UIViewController {
     @IBOutlet var pkrType : UIPickerView!
     @IBOutlet var segSize : UISegmentedControl!
     @IBOutlet var quantity : UITextField!
+    
+    private let dbHelper = DatabaseHelper.getInstance()
  
+   
+    
     let typeList = ["Espresso","Americano","Latte","Cappuccino","Mocha","Vanilla"]
-    var orderList = Array<Order>()
-    var newOrder = Order()
+   // var orderList = Array<Order>()
+   // var newOrder = Order()
+    var orderList : [MyOrder] = [MyOrder]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,11 +52,14 @@ class ViewController: UIViewController {
     @IBAction func addOrder(){
         
         if(!self.quantity.text!.isEmpty){
-            
+            let newOrder = MyOrder()
             newOrder.type = self.typeList[self.pkrType.selectedRow(inComponent: 0)]
             newOrder.size = self.segSize.titleForSegment(at: self.segSize.selectedSegmentIndex)!
             newOrder.quantity = quantity.text!
-            orderList.append(newOrder)
+            
+            //self.dbHelper.insertOrder(newMyOrder: newOrder)
+           
+            //orderList.append(newOrder)
            
             print(#function, "Type : \(newOrder.type) Size : \(newOrder.size) Qty :  \(newOrder.quantity)")
             
@@ -86,10 +94,12 @@ class ViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let orderVC = storyboard.instantiateViewController(identifier: "OrderVC") as! OrderTableViewController
     
-        orderVC.orderList = orderList
+     //   orderVC.orderList = orderList
         self.navigationController?.pushViewController(orderVC, animated: true)
         
     }
+    
+  
 }
 
 

@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  MyOrder_Yuki_A3
-//
-//  Created by Yuki Waka on 2021-03-26.
-//
+//  YukiWaka_MyOrder
+//  Created by Yuki Waka on 2021-02-18.
+//  Student# : 141082180
+//  Date : Feb 19.2021
 
 import UIKit
 

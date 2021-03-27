@@ -13,6 +13,9 @@
 		5516BFB0260EB7E300482665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5516BFAE260EB7E300482665 /* Main.storyboard */; };
 		5516BFB2260EB7E400482665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5516BFB1260EB7E400482665 /* Assets.xcassets */; };
 		5516BFB5260EB7E400482665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5516BFB3260EB7E400482665 /* LaunchScreen.storyboard */; };
+		5516BFC0260EB9B700482665 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516BFBF260EB9B700482665 /* Order.swift */; };
+		5516BFC3260EBA2E00482665 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516BFC2260EBA2E00482665 /* OrderTableViewController.swift */; };
+		5516BFC6260EBA5700482665 /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5516BFC5260EBA5700482665 /* CartCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		5516BFB1260EB7E400482665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5516BFB4260EB7E400482665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5516BFB6260EB7E400482665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5516BFBF260EB9B700482665 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		5516BFC2260EBA2E00482665 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		5516BFC5260EBA5700482665 /* CartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		5516BFA7260EB7E300482665 /* MyOrder_Yuki_A3 */ = {
 			isa = PBXGroup;
 			children = (
+				5516BFBE260EB9A000482665 /* model */,
 				5516BFA8260EB7E300482665 /* AppDelegate.swift */,
 				5516BFAA260EB7E300482665 /* SceneDelegate.swift */,
 				5516BFAC260EB7E300482665 /* ViewController.swift */,
@@ -63,8 +70,18 @@
 				5516BFB1260EB7E400482665 /* Assets.xcassets */,
 				5516BFB3260EB7E400482665 /* LaunchScreen.storyboard */,
 				5516BFB6260EB7E400482665 /* Info.plist */,
+				5516BFC2260EBA2E00482665 /* OrderTableViewController.swift */,
+				5516BFC5260EBA5700482665 /* CartCell.swift */,
 			);
 			path = MyOrder_Yuki_A3;
+			sourceTree = "<group>";
+		};
+		5516BFBE260EB9A000482665 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5516BFBF260EB9B700482665 /* Order.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5516BFAD260EB7E300482665 /* ViewController.swift in Sources */,
+				5516BFC6260EBA5700482665 /* CartCell.swift in Sources */,
+				5516BFC3260EBA2E00482665 /* OrderTableViewController.swift in Sources */,
 				5516BFA9260EB7E300482665 /* AppDelegate.swift in Sources */,
+				5516BFC0260EB9B700482665 /* Order.swift in Sources */,
 				5516BFAB260EB7E300482665 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

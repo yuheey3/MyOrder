@@ -1,24 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Da-aN-kkO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YukiWaka_MyOrder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZzF-IL-YRr">
+                                <rect key="frame" x="20" y="567" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Small"/>
+                                    <segment title="Medium"/>
+                                    <segment title="Large"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What coffee you like to order?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10x-Pm-S6Q">
+                                <rect key="frame" x="20" y="138" width="374" height="28.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rh5-dd-DPS">
+                                <rect key="frame" x="20" y="522" width="32" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-0T-YYA">
+                                <rect key="frame" x="20" y="648" width="67" height="24.5"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DNG-jE-6iK">
+                                <rect key="frame" x="20" y="266" width="374" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3X-Hd-hb9">
+                                <rect key="frame" x="20" y="211" width="36" height="25"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XLN-Tc-GIq">
+                                <rect key="frame" x="153" y="648" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lol-lC-vSt">
+                                <rect key="frame" x="20" y="722" width="374" height="52"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="28"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Add Order"/>
+                                <connections>
+                                    <action selector="addOrder" destination="BYZ-38-t0r" eventType="touchUpInside" id="tef-DO-qmN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="N3X-Hd-hb9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="23V-R7-FO1"/>
+                            <constraint firstItem="Lol-lC-vSt" firstAttribute="top" secondItem="XLN-Tc-GIq" secondAttribute="bottom" constant="40" id="4Bg-ka-SQs"/>
+                            <constraint firstItem="N3X-Hd-hb9" firstAttribute="top" secondItem="10x-Pm-S6Q" secondAttribute="bottom" constant="44.5" id="4yT-va-e52"/>
+                            <constraint firstItem="XLN-Tc-GIq" firstAttribute="top" secondItem="ZzF-IL-YRr" secondAttribute="bottom" constant="50" id="5dh-cI-Eiq"/>
+                            <constraint firstItem="10x-Pm-S6Q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="AMA-JU-Eiu"/>
+                            <constraint firstItem="ZzF-IL-YRr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="AjE-ov-BAx"/>
+                            <constraint firstItem="Rh5-dd-DPS" firstAttribute="top" secondItem="DNG-jE-6iK" secondAttribute="bottom" constant="40" id="C6J-Wv-itt"/>
+                            <constraint firstItem="Lol-lC-vSt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="JXu-Ys-sZ1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="10x-Pm-S6Q" secondAttribute="trailing" constant="20" id="JYc-kb-e0u"/>
+                            <constraint firstItem="Rh5-dd-DPS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="LJm-0A-CI7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Lol-lC-vSt" secondAttribute="trailing" constant="20" id="USY-fi-OsQ"/>
+                            <constraint firstItem="ZzF-IL-YRr" firstAttribute="top" secondItem="Rh5-dd-DPS" secondAttribute="bottom" constant="20" id="VNs-QI-lLh"/>
+                            <constraint firstItem="sAl-0T-YYA" firstAttribute="top" secondItem="ZzF-IL-YRr" secondAttribute="bottom" constant="50" id="Wtq-Jw-MCA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DNG-jE-6iK" secondAttribute="trailing" constant="20" id="ZTA-CJ-ary"/>
+                            <constraint firstItem="10x-Pm-S6Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aUD-PY-z0D"/>
+                            <constraint firstItem="sAl-0T-YYA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cp0-XN-Tc3"/>
+                            <constraint firstItem="XLN-Tc-GIq" firstAttribute="leading" secondItem="sAl-0T-YYA" secondAttribute="trailing" constant="66" id="dhs-1V-lCI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Rh5-dd-DPS" secondAttribute="trailing" symbolic="YES" id="h6k-2l-6Wz"/>
+                            <constraint firstItem="DNG-jE-6iK" firstAttribute="top" secondItem="N3X-Hd-hb9" secondAttribute="bottom" constant="30" id="hUK-19-wf1"/>
+                            <constraint firstItem="DNG-jE-6iK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nWH-ft-A0X"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZzF-IL-YRr" secondAttribute="trailing" constant="20" id="th3-m4-OVl"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="gCF-rL-F9a"/>
+                    <connections>
+                        <outlet property="pkrType" destination="DNG-jE-6iK" id="H1N-Ad-Evx"/>
+                        <outlet property="quantity" destination="XLN-Tc-GIq" id="Xzn-qp-H8q"/>
+                        <outlet property="segSize" destination="ZzF-IL-YRr" id="ri4-kD-vla"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="939.13043478260875" y="83.705357142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Stv-yZ-SgP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Da-aN-kkO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Cw-5e-AVP">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="xPp-gC-xd6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oG-qW-cm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+        <!--Order Table View Controller-->
+        <scene sceneID="SiZ-Yp-EAo">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderVC" id="0wr-20-IQd" customClass="OrderTableViewController" customModule="YukiWaka_MyOrder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gq4-0b-F1e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell_cart" rowHeight="91" id="7nV-7i-Ncd" customClass="CartCell" customModule="YukiWaka_MyOrder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7nV-7i-Ncd" id="hft-D1-wUB">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Mm-39-MVx">
+                                            <rect key="frame" x="30" y="43" width="272" height="37"/>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKI-h5-3Cp">
+                                            <rect key="frame" x="10" y="8" width="312" height="30"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                            <color key="textColor" systemColor="systemPurpleColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Qty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHm-EN-pJc">
+                                            <rect key="frame" x="338" y="23" width="64" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="64" id="Kdb-xT-C0i"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="27"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="NKI-h5-3Cp" firstAttribute="leading" secondItem="hft-D1-wUB" secondAttribute="leading" constant="10" id="4hh-ed-Btz"/>
+                                        <constraint firstItem="rHm-EN-pJc" firstAttribute="leading" secondItem="NKI-h5-3Cp" secondAttribute="trailing" constant="16" id="561-Bq-JuS"/>
+                                        <constraint firstItem="8Mm-39-MVx" firstAttribute="centerX" secondItem="NKI-h5-3Cp" secondAttribute="centerX" id="B1G-Cu-HTi"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="8Mm-39-MVx" secondAttribute="trailing" constant="83" id="D8r-bE-hVS"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="rHm-EN-pJc" secondAttribute="trailing" constant="-8" id="K2a-qV-7Hf"/>
+                                        <constraint firstItem="rHm-EN-pJc" firstAttribute="top" secondItem="hft-D1-wUB" secondAttribute="topMargin" constant="12" id="P4P-f8-0Zn"/>
+                                        <constraint firstItem="8Mm-39-MVx" firstAttribute="top" secondItem="NKI-h5-3Cp" secondAttribute="bottom" constant="5" id="WYw-Vl-PYZ"/>
+                                        <constraint firstItem="8Mm-39-MVx" firstAttribute="centerX" secondItem="NKI-h5-3Cp" secondAttribute="centerX" id="hJW-8r-Xwn"/>
+                                        <constraint firstItem="rHm-EN-pJc" firstAttribute="centerY" secondItem="hft-D1-wUB" secondAttribute="centerY" id="lDH-u1-e6q"/>
+                                        <constraint firstItem="NKI-h5-3Cp" firstAttribute="top" secondItem="hft-D1-wUB" secondAttribute="top" constant="8" id="qE5-Bl-7gz"/>
+                                        <constraint firstItem="8Mm-39-MVx" firstAttribute="bottom" secondItem="hft-D1-wUB" secondAttribute="bottomMargin" id="uXj-hs-RMe"/>
+                                        <constraint firstItem="8Mm-39-MVx" firstAttribute="leading" secondItem="hft-D1-wUB" secondAttribute="leadingMargin" constant="10" id="x9U-i5-uha"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblQty" destination="rHm-EN-pJc" id="7Nm-4N-xLn"/>
+                                    <outlet property="lblSize" destination="8Mm-39-MVx" id="iTL-yw-dst"/>
+                                    <outlet property="lblType" destination="NKI-h5-3Cp" id="osx-oT-atZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0wr-20-IQd" id="xop-gD-GZP"/>
+                            <outlet property="delegate" destination="0wr-20-IQd" id="Zuc-gW-A9s"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z57-BO-exu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.57971014492756" y="728.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

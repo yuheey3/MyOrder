@@ -8,23 +8,29 @@
 import Foundation
 
 struct Order{
+   // var id : String = UUID().uuidString
     var type : String
     var size : String
     var quantity : String
+ //   var date : Date
     var orderList = Array<Order>()
     
     init(){
+  //      self.id = ""
         self.type = ""
         self.size = ""
         self.quantity = ""
+ //       self.date = Date()
     }
     
     init(type : String, size : String, quantity : String){
         self.type = type
         self.size = size
         self.quantity = quantity
+     //   self.date = Date()
     }
 }
+
 
         
 
